@@ -1,0 +1,109 @@
+.content {
+	background: $seconday;
+
+	.wrapper-principal-info {
+		background: $background-color;
+		border-radius: 0 0 35% 35%;
+
+		.info {
+			padding: 0.5em 1.5em 0 1.5em;
+			a {
+				i {
+					color: $light-color;
+
+					@media (min-width: 768px) {
+						font-size: 1.3em;
+
+						@media (min-width: 1024px) {
+							font-size: 1.8em;
+						}
+					}
+				}
+			}
+
+			.id {
+				margin: 0.5em 0;
+				font-size: 1.2em;
+				color: $light-color;
+
+				@media (min-width: 768px) {
+					font-size: 1.8em;
+
+					@media (min-width: 1024px) {
+						font-size: 2em;
+					}
+				}
+			}
+
+			.name {
+				margin: 0;
+				font-size: 1.5em;
+				color: $light-color;
+				font-weight: 700;
+
+				@media (min-width: 768px) {
+					font-size: 2.5em;
+
+					@media (min-width: 1024px) {
+						font-size: 3em;
+					}
+				}
+			}
+		}
+
+		.image {
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			padding-bottom: 0.5em;
+			img {
+				width: 30%;
+
+				@media (min-width: 768px) {
+					width: 20%;
+
+					@media (min-width: 1024px) {
+						width: 15%;
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper-other-info {
+		.buttons {
+			margin: 1em;
+			display: flex;
+			justify-content: space-evenly;
+
+			@include info-button;
+		}
+
+		.info {
+			div {
+				margin: 1em;
+				h4 {
+					color: $background-color;
+					@media (min-width: 768px) {
+						font-size: 1.3em;
+
+						@media (min-width: 1024px) {
+							font-size: 1.8em;
+						}
+					}
+				}
+				p {
+					font-size: 0.8em;
+					@media (min-width: 768px) {
+						font-size: 1em;
+
+						@media (min-width: 1024px) {
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

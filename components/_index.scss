@@ -1,0 +1,56 @@
+.wrapper-content {
+	height: auto;
+	background: $background-color;
+	padding-bottom: 1rem;
+	min-height: 100vh;
+
+	.nav {
+		background-color: $primary;
+		display: flex;
+		border-radius: 0 0 10% 10%;
+		align-content: center;
+
+		.title {
+			display: flex;
+			align-content: center;
+
+			h1 {
+				color: $text-primary;
+				font-size: 1.8em;
+				margin: 0.5em;
+
+				@media (min-width: 768px) {
+					font-size: 2em;
+
+					@media (min-width: 1024px) {
+						font-size: 2.5em;
+					}
+				}
+			}
+		}
+	}
+	.search-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2.5em;
+		margin: 1em 0;
+
+		@include search-button;
+	}
+	.pokemon-list {
+		width: 100%;
+		height: auto;
+
+		@include pokemon-card;
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			@media (min-width: 1024px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
