@@ -9,88 +9,130 @@ $light-color: #fff;
 
 $font-primary: "Josefin Sans", sans-serif;
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: $font-primary;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.02);
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
 }
 
 .color-normal {
-	background-color: rgba(199, 180, 159, 0.6);
+  background-color: rgba(199, 180, 159, 0.6);
 }
 
 .color-grass {
-	background-color: rgba(155, 204, 80, 0.6);
+  background-color: rgba(155, 204, 80, 0.6);
 }
 
 .color-poison {
-	background-color: rgba(185, 127, 201, 0.6);
+  background-color: rgba(185, 127, 201, 0.6);
 }
 
 .color-flying {
-	background-color: rgba(211, 224, 255, 0.6);
+  background-color: rgba(211, 224, 255, 0.6);
 }
 
 .color-fire {
-	background-color: rgba(240, 128, 48, 0.6);
+  background-color: rgba(240, 128, 48, 0.6);
 }
 
 .color-water {
-	background-color: rgba(130, 199, 232, 0.6);
+  background-color: rgba(130, 199, 232, 0.6);
 }
 
 .color-bug {
-	background-color: rgba(175, 217, 164, 0.6);
+  background-color: rgba(175, 217, 164, 0.6);
 }
 
 .color-electric {
-	background-color: rgba(238, 213, 53, 0.6);
+  background-color: rgba(238, 213, 53, 0.6);
 }
 
 .color-ground {
-	background-color: rgba(213, 190, 122, 0.6);
+  background-color: rgba(213, 190, 122, 0.6);
 }
 
 .color-fairy {
-	background-color: rgba(246, 191, 196, 0.6);
+  background-color: rgba(246, 191, 196, 0.6);
 }
 
 .color-fighting {
-	background-color: rgba(213, 103, 35, 0.6);
+  background-color: rgba(213, 103, 35, 0.6);
 }
 
 .color-psychic {
-	background-color: rgba(247, 133, 200, 0.6);
+  background-color: rgba(247, 133, 200, 0.6);
 }
 
 .color-rock {
-	background-color: rgba(185, 177, 137, 0.6);
+  background-color: rgba(185, 177, 137, 0.6);
 }
 
 .color-steel {
-	background-color: rgba(179, 178, 180, 0.6);
+  background-color: rgba(179, 178, 180, 0.6);
 }
 
 .color-ghost {
-	background-color: rgba(111, 112, 167, 0.6);
+  background-color: rgba(111, 112, 167, 0.6);
 }
 
 .color-ice {
-	background-color: rgba(188, 225, 243, 0.6);
+  background-color: rgba(188, 225, 243, 0.6);
 }
 
 .color-dragon {
-	background-color: rgba(60, 159, 187, 0.6);
+  background-color: rgba(60, 159, 187, 0.6);
 }
 
 .color-dark {
-	background-color: rgba(118, 112, 131, 0.6);
+  background-color: rgba(118, 112, 131, 0.6);
 }
 
 .none {
-	display: none !important;
+  display: none !important;
 }
 .visible {
-	display: visible !important;
+  display: visible !important;
+}
+
+.container {
+  padding: 0 1em;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
 }

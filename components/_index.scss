@@ -1,56 +1,66 @@
 .wrapper-content {
-	height: auto;
-	background: $background-color;
-	padding-bottom: 1rem;
-	min-height: 100vh;
+  height: auto;
+  background: $background-color;
+  padding-bottom: 1rem;
+  min-height: 100vh;
 
-	.nav {
-		background-color: $primary;
-		display: flex;
-		border-radius: 0 0 10% 10%;
-		align-content: center;
+  .nav {
+    background-color: $primary;
+    display: flex;
+    border-radius: 0 0 10% 10%;
+    align-content: center;
 
-		.title {
-			display: flex;
-			align-content: center;
+    .title {
+      display: flex;
+      align-content: center;
 
-			h1 {
-				color: $text-primary;
-				font-size: 1.8em;
-				margin: 0.5em;
+      h1 {
+        color: $text-primary;
+        font-size: 1.8em;
+        margin: 0.5em;
 
-				@media (min-width: 768px) {
-					font-size: 2em;
+        @media (min-width: 768px) {
+          font-size: 2em;
 
-					@media (min-width: 1024px) {
-						font-size: 2.5em;
-					}
-				}
-			}
-		}
-	}
-	.search-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 2.5em;
-		margin: 1em 0;
+          @media (min-width: 1024px) {
+            font-size: 2.5em;
+          }
+        }
+      }
+    }
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    margin: 1em 0;
 
-		@include search-button;
-	}
-	.pokemon-list {
-		width: 100%;
-		height: auto;
+    @include search-button;
+  }
+  .pokemon-list {
+    display: grid;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
 
-		@include pokemon-card;
-		@media (min-width: 768px) {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 1.5rem;
 
-			@media (min-width: 1024px) {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-			}
-		}
-	}
+    @include pokemon-card;
+  }
+}
+
+.spin {
+  animation: rotate-infinite 2s linear infinite;
+  transition: all ease-in-out 0.5s;
+}
+
+@keyframes rotate-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,203 +1,180 @@
 @mixin index-button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: $light-color;
-	width: 1.5em;
-	height: 1.5em;
-	line-height: 1.5em;
-	text-align: center;
-	color: $background-color;
-	font-size: 1em;
-	padding: 0.2em;
-	border-radius: 50%;
-	cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $light-color;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  color: $background-color;
+  font-size: 1em;
+  padding: 0.2em;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @mixin info-button {
-	a {
-		text-decoration: none;
-		background: $background-color;
-		color: $light-color;
-		border-radius: 5em;
-		padding: 0.5em;
+  a {
+    text-decoration: none;
+    background: $background-color;
+    color: $light-color;
+    border-radius: 5em;
+    padding: 0.5em;
 
-		@media (min-width: 768px) {
-			font-size: 1.3em;
+    @media (min-width: 768px) {
+      font-size: 1.3em;
 
-			@media (min-width: 1024px) {
-				font-size: 1.8em;
-			}
-		}
-		&:hover {
-			background: none;
-		}
+      @media (min-width: 1024px) {
+        font-size: 1.8em;
+      }
+    }
+    &:hover {
+      background: none;
+    }
 
-		&:focus {
-			background: none;
-		}
-	}
+    &:focus {
+      background: none;
+    }
+  }
 }
 
 @mixin search-button {
-	.search {
-		position: absolute;
-		padding: 0.3em;
+  .search {
+    position: absolute;
+    padding: 0.3em;
 
-		&:hover input {
-			width: 15em;
-		}
+    &:hover input {
+      width: 15em;
+    }
 
-		input {
-			width: 0;
-			height: 1.5em;
-			padding: 0.3em;
-			font-size: 1em;
-			font-family: $font-primary;
-			color: $text-primary;
-			outline: none;
-			border: 1px solid $background-color;
-			border-radius: 30px;
-			transition: all 0.6s ease;
+    input {
+      width: 0;
+      height: 1.5em;
+      padding: 0.3em;
+      font-size: 1em;
+      font-family: $font-primary;
+      color: $text-primary;
+      outline: none;
+      border: 1px solid $background-color;
+      border-radius: 30px;
+      transition: all 0.6s ease;
 
-			@media (min-width: 768px) {
-				font-size: 1.2em;
+      @media (min-width: 768px) {
+        font-size: 1.2em;
 
-				@media (min-width: 1024px) {
-					font-size: 1.5em;
-				}
-			}
+        @media (min-width: 1024px) {
+          font-size: 1.5em;
+        }
+      }
 
-			&:focus {
-				width: 15em;
-			}
-		}
+      &:focus {
+        width: 15em;
+      }
+    }
 
-		.btn {
-			position: absolute;
-			top: 0;
-			right: 0;
-			background: $light-color;
-			width: 1.5em;
-			height: 1.5em;
-			line-height: 1.5em;
-			text-align: center;
-			color: $background-color;
-			font-size: 1em;
-			padding: 0.2em;
-			border-radius: 50%;
-			cursor: pointer;
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $light-color;
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5em;
+      text-align: center;
+      color: $background-color;
+      font-size: 1em;
+      padding: 0.2em;
+      border-radius: 50%;
+      cursor: pointer;
 
-			@media (min-width: 768px) {
-				font-size: 1.2em;
+      @media (min-width: 768px) {
+        font-size: 1.2em;
 
-				@media (min-width: 1024px) {
-					font-size: 1.5em;
-				}
-			}
-		}
-	}
+        @media (min-width: 1024px) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
 }
 
 @mixin pokemon-card {
-	a {
-		text-decoration: none;
-		color: $text-primary;
-		.card {
-			display: flex;
-			background: $primary;
-			height: auto;
-			margin: 1.1em;
-			padding: 0.3em;
-			border-radius: 1em;
+  a {
+    text-decoration: none;
+    color: $text-primary;
+    .card {
+      display: flex;
+      background: $primary;
+      height: auto;
+      padding: 0.3em;
+      border-radius: 1.3rem;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 20px;
+      overflow: hidden;
+      position: relative;
 
-			@media (min-width: 768px) {
-				margin: 1em 1.5em;
+      @media (min-width: 768px) {
+        margin: 1em 1.5em;
 
-				@media (min-width: 1024px) {
-					margin: 1.5em 2.2em;
-				}
-			}
+        @media (min-width: 1024px) {
+          margin: 1.5em 2.2em;
+        }
+      }
 
-			&:hover {
-				transform: scale(1.1);
-				transition: transform 0.3s ease-in-out;
-				color: $text-primary;
-			}
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+        color: $text-primary;
+      }
 
-			&:focus {
-				transform: scale(1.1);
-				transition: transform 0.3s ease-in-out;
-				color: $text-primary;
-			}
+      &:focus {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+        color: $text-primary;
+      }
 
-			.pokemon-img {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 90px;
-				width: 90px;
+      .pokemon-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-				@media (min-width: 768px) {
-					height: 200px;
-					width: auto;
+        img {
+          width: 130px;
+          -webkit-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
+          -webkit-filter: drop-shadow(0 1px 3px hsla(0, 0%, 100%, 0.9));
+          filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.9));
+        }
+      }
+      .pokemon-info {
+        width: 100%;
+        margin: auto;
 
-					@media (min-width: 1024px) {
-						height: 300px;
-						width: auto;
-					}
-				}
+        h3 {
+          font-weight: 600;
+          color: $text-primary;
+          margin: 0 0 0.8rem 0;
+          text-transform: capitalize;
+        }
+        .wrapper-species {
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          color: transparent;
 
-				img {
-					height: 100%;
-					width: 100%;
-					object-fit: contain;
-				}
-			}
-			.pokemon-info {
-				width: 70%;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-
-				h2 {
-					font-weight: 600;
-					color: $text-primary;
-					margin: 0 0 0.8rem 0;
-					text-transform: capitalize;
-
-					@media (min-width: 768px) {
-						font-size: 1.9em;
-
-						@media (min-width: 1024px) {
-							font-size: 2em;
-						}
-					}
-				}
-				.wrapper-species {
-					height: auto;
-					display: flex;
-					flex-wrap: wrap;
-					color: transparent;
-
-					div {
-						border: 1px solid $background-color;
-						padding: 5px;
-						border-radius: 7px;
-						margin: 0.3rem;
-						color: rgba(0, 0, 0, 0.7);
-
-						@media (min-width: 768px) {
-							font-size: 1.2em;
-
-							@media (min-width: 1024px) {
-								font-size: 1.5em;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+          .pokemon-type {
+            padding: 3px 8px;
+            border-radius: 1.2rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2) !important;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            margin: 3px;
+          }
+        }
+      }
+    }
+  }
 }
