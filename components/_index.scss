@@ -52,7 +52,7 @@
 }
 
 .spin {
-  animation: rotate-infinite 2s linear infinite;
+  animation: rotate-infinite 1.5s linear infinite;
   transition: all ease-in-out 0.5s;
 }
 
@@ -62,5 +62,60 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.search-button {
+  background: #e0562c;
+  color: white;
+  width: 9rem;
+  text-align: center;
+  padding: 0.5em 0;
+  border-radius: 16px;
+  margin: 1em;
+
+  i {
+    color: white;
+  }
+
+  &:hover {
+    background: #d45129;
+  }
+}
+
+.loading-button {
+  border: 1px solid #e0562c;
+  color: #e0562c;
+  width: 9rem;
+  text-align: center;
+  padding: 0.5em 0;
+  border-radius: 16px;
+  margin: 1em;
+
+  i {
+    color: #e0562c;
+  }
+}
+
+.switch-button {
+  margin: 1em;
+  border-radius: 5px;
+
+  input {
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  label {
+    padding: 0.5em 1em;
+
+    float: left;
+    border: 1px solid #e0562c;
+    color: #e0562c;
+  }
+  input[type="radio"]:checked + label {
+    background: #e0562c;
+    color: white;
   }
 }
