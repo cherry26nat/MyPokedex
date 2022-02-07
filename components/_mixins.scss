@@ -41,9 +41,6 @@
 
 @mixin search-button {
   .search {
-    position: absolute;
-    padding: 0.3em;
-
     &:hover input {
       width: 15em;
     }
@@ -113,25 +110,16 @@
       box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 20px;
       overflow: hidden;
       position: relative;
-
-      @media (min-width: 768px) {
-        margin: 1em 1.5em;
-
-        @media (min-width: 1024px) {
-          margin: 1.5em 2.2em;
-        }
-      }
+      transition: transform 0.3s ease-in-out;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.06);
         transition: transform 0.3s ease-in-out;
-        color: $text-primary;
       }
 
       &:focus {
-        transform: scale(1.1);
+        transform: scale(1.06);
         transition: transform 0.3s ease-in-out;
-        color: $text-primary;
       }
 
       .pokemon-img {

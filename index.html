@@ -16,44 +16,47 @@
   </head>
   <body>
     <div class="wrapper-content">
-      <nav class="nav">
-        <div class="title">
-          <h1>Pokedex</h1>
-        </div>
-      </nav>
-
-      <div class="search-container">
-        <div class="search">
-          <form id="form-search">
-            <input type="search" id="data-search" placeholder="Search..." />
-            <button type="submit" class="btn" id="btn-search">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
+     
+      <div class="header-container">
+        <nav class="nav">
+          <div class="title">
+            <h1>Pokedex</h1>
+          </div>
+          <div class="search-container">
+            <div class="search">
+              <form id="form-search">
+                <input type="search" id="data-search" placeholder="Search..." />
+                <button type="submit" class="btn" id="btn-search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
-      <!--Search Button
-      <div class="search-button">
-        <i class="fas fa-search"></i> Buscar
-      </div>
-      -->
-      <!--Loading Button
-      <div class="loading-button">
-        <i class="fas fa-circle-notch spin"></i> Cargando...
-      </div>
-      -->
-      <!--Switch Button
-      <div class="switch-button">
   
-         <input type="radio" name="options" value="1" id="one" checked></input>
-         <label for="one">2D</label>
-        <input type="radio" name="options" value="2" id="two"></input>
-         <label for="two">3D</label>
-      
+      <div class="container d-flex justify-content-end">
+        <!-- Search Button
+        <button class="btn-primary"><i class="fas fa-search"></i> Buscar</button> -->
+
+        <span class="switch-button">
+    
+           <input type="radio" name="options" value="1" id="one" checked></input>
+           <label for="one">2D</label>
+          <input type="radio" name="options" value="2" id="two"></input>
+           <label for="two">3D</label>
+        
+        </span>
       </div>
-      -->
+     
+
       <div class="container">
         <div id="pokemon-list" class="pokemon-list"></div>
+      </div>
+      <div class="container">
+        <button class="btn-primary">
+          <i class="fas fa-circle-notch spin"></i> Cargando...
+        </button>
       </div>
     </div>
 
