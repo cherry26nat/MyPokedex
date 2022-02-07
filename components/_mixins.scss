@@ -47,8 +47,9 @@
 
     input {
       width: 0;
-      height: 1.5em;
-      padding: 0.3em;
+      height: 100%;
+      margin-right: 7px;
+      padding: 0.5em;
       font-size: 1em;
       font-family: $font-primary;
       color: $text-primary;
@@ -72,18 +73,19 @@
 
     .btn {
       position: absolute;
-      top: 0;
+      top: 2px;
       right: 0;
       background: $light-color;
-      width: 1.5em;
-      height: 1.5em;
       line-height: 1.5em;
       text-align: center;
       color: $background-color;
       font-size: 1em;
-      padding: 0.2em;
+      padding: 0.4em;
       border-radius: 50%;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @media (min-width: 768px) {
         font-size: 1.2em;
@@ -102,7 +104,6 @@
     color: $text-primary;
     .card {
       display: flex;
-      background: $primary;
       height: auto;
       padding: 0.3em;
       border-radius: 1.3rem;
