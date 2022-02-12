@@ -1,17 +1,17 @@
-const elementBtnRadio1 = document.querySelector("#btnradio1");
-const elementBtnRadio2 = document.querySelector("#btnradio2");
+const elementBtnRadio2D = document.querySelector("#btnradio2D");
+const elementBtnRadio3D = document.querySelector("#btnradio3D");
 
-elementBtnRadio1.addEventListener("click", () => {
-  onClickCheckedAdd(elementBtnRadio1);
-  onClickCheckedRemove(elementBtnRadio2);
+elementBtnRadio2D.addEventListener("click", () => {
+  onClickCheckedAdd(elementBtnRadio2D);
+  onClickCheckedRemove(elementBtnRadio3D);
   localStorage.setItem("imageType", "2d");
   initialApp();
 });
 
-elementBtnRadio2.addEventListener("click", () => {
+elementBtnRadio3D.addEventListener("click", () => {
   console.log("radio2");
-  onClickCheckedAdd(elementBtnRadio2);
-  onClickCheckedRemove(elementBtnRadio1);
+  onClickCheckedAdd(elementBtnRadio3D);
+  onClickCheckedRemove(elementBtnRadio2D);
   localStorage.setItem("imageType", "3d");
   initialApp();
 });

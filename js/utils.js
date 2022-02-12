@@ -60,11 +60,11 @@ const mapRenderPokemonType = (types) => {
 };
 
 //Return color pokemon type
-const colorType = (typePokemon) => dataByType[typePokemon].class;
+const colorType = (typePokemon = "normal") => dataByType[typePokemon].class;
 
 //GET IMAGE POKEMON
 const getImagePokemon = (pokemon, sizeImage = "small", imageType = "3d") => {
-  if (!pokemon) return null;
+  if (!pokemon) return "./img/pokeball2.png";
 
   const serverImageApi =
     imageType === "2d" ? config.serverPokemonPuntoCom : config.serverSerebi;
@@ -72,7 +72,7 @@ const getImagePokemon = (pokemon, sizeImage = "small", imageType = "3d") => {
   if (pokemon.id > serverImageApi["maxPokemons"]) {
     return pokemon.sprites.front_default
       ? pokemon.sprites.front_default
-      : "./images/pokeball2.png";
+      : "./img/pokeball2.png";
   }
 
   const _sizeImage = sizeImage === "small" ? "urlImgSmall" : "urlImgLarge";
