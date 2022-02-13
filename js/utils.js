@@ -95,3 +95,9 @@ const addClassName = (element, className) => element.classList.add(className);
 //REMOVE CLASS NAMES
 const removeClassName = (element, className) =>
   element.classList.remove(className);
+
+//GET DATA FROM URL
+const getParams = (param) => {
+  const url = new URL(location.href);
+  return url.searchParams.get(param);
+};
