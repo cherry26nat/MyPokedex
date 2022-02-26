@@ -6,17 +6,30 @@
 
     .info {
       padding: 0.5em 1.5em 0 1.5em;
-      a {
-        i {
-          color: $light-color;
 
-          @media (min-width: 768px) {
-            font-size: 1.3em;
+      .header {
+        display: flex;
+        justify-content: space-between;
+        a {
+          i {
+            color: $light-color;
 
-            @media (min-width: 1024px) {
-              font-size: 1.8em;
+            @media (min-width: 768px) {
+              font-size: 1.3em;
+
+              @media (min-width: 1024px) {
+                font-size: 1.8em;
+              }
             }
           }
+        }
+
+        .button {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          background: $background-color;
+          border: 0.15rem solid $light-color;
         }
       }
 
@@ -39,6 +52,7 @@
         font-size: 1.5em;
         color: $light-color;
         font-weight: 700;
+        text-transform: capitalize;
 
         @media (min-width: 768px) {
           font-size: 2.5em;
@@ -100,6 +114,110 @@
             @media (min-width: 1024px) {
               font-size: 1.5em;
             }
+          }
+        }
+      }
+
+      .status {
+        #pokemonType {
+          display: flex;
+
+          .pokemon-type {
+            padding: 3px 8px;
+            border-radius: 1.2rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2) !important;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            margin: 3px;
+            text-transform: capitalize;
+            font-size: 0.8em;
+
+            @media (min-width: 768px) {
+              font-size: 1em;
+
+              @media (min-width: 1024px) {
+                font-size: 1.5em;
+              }
+            }
+          }
+        }
+      }
+
+      .statistics {
+        .graphic {
+          margin: 0;
+          .bar {
+            margin: 0;
+            width: 10rem;
+            height: 2rem;
+            border: 0.15rem solid black;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            p {
+              text-align: center;
+              width: 10rem;
+              position: absolute;
+              height: 2rem;
+              margin: 0;
+              font-size: 1.3rem;
+            }
+            .bar-color {
+              width: 24%;
+              height: 100%;
+              background: red;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .evolution {
+        .evolution-img {
+          width: 100%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 0.5em;
+          flex-direction: column;
+
+          img {
+            width: 25%;
+
+            @media (min-width: 768px) {
+              width: 15%;
+
+              @media (min-width: 1024px) {
+                width: 10%;
+              }
+            }
+          }
+          p {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    position: fixed;
+    bottom: 1rem;
+    right: 3rem;
+
+    div {
+      margin: 0.5rem;
+      i {
+        color: $background-color;
+
+        @media (min-width: 768px) {
+          font-size: 1.3em;
+
+          @media (min-width: 1024px) {
+            font-size: 1.8em;
           }
         }
       }

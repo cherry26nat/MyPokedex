@@ -2,6 +2,8 @@ const elementPokemonId = document.querySelector("#pokemonId");
 const elementPokemonName = document.querySelector("#pokemonName");
 const elementPokemonImage = document.querySelector("#pokemonImage");
 const elementWrapperBgPokemon = document.querySelector("#wrapperBgPokemon");
+const elementPokemonDescription = document.querySelector("#pokemonDescription");
+const elementPokemonType = document.querySelector("#pokemonType");
 
 const pokemonId = getParams("id");
 
@@ -25,9 +27,14 @@ const getPokemon = async () => {
 
   setBackgroundBody(pokemonsTypes, elementWrapperBgPokemon);
 
-  const descriptionES = getDescription(pokemon, "en");
-
+  const descriptionES = getDescription(pokemon, "es");
   console.log(descriptionES);
+
+  elementPokemonDescription.innerHTML = `${descriptionES}`;
+
+  elementPokemonType.innerHTML = `${mapRenderPokemonType(
+    pokemon.detail.types
+  )}`;
 };
 
 getPokemon();
