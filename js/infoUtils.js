@@ -37,3 +37,33 @@ const getDescription = (pokemon, languageCode) => {
   ).flavor_text;
   return descriptionEN;
 };
+
+const speechVoice = (languageCode, description) => {
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = languageCode;
+  utterance.volume = 1;
+  speechSynthesis.speak(utterance);
+  utterance.addEventListener("start", () =>
+    elementItemSpeech.classList.add("animate-speech")
+  );
+  utterance.addEventListener("end", () =>
+    elementItemSpeech.classList.remove("animate-speech")
+  );
+};
+
+const mapRenderStats = (elementRender, stats) => {
+  return stats.map(({ base_stat, stat }) => {
+    const statConfig_ = statsConfig[stat.name] || {};
+    console.log(statConfig_);
+    console.log(stats);
+
+    return (elementRender.innerHTML += `
+    <div class="item">
+    <p>${statConfig_.name}</p>
+      <div class="bar">
+       <span>${base_stat}%</span>
+        <div class="bar-color ${statConfig_.type_progress}" style="width: ${base_stat}%"></div>
+        </div>
+      </div> `);
+  });
+};

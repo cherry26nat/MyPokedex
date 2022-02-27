@@ -130,11 +130,11 @@ const statsConfig = {
   defense: { name: "Defensa", type_progress: "bg-primary" },
   "special-attack": {
     name: "Ataque especial",
-    type_progress: "bg-danger progress-bar-striped",
+    type_progress: "bg--danger ",
   },
   "special-defense": {
     name: "Defensa especial",
-    type_progress: "bg-pimary progress-bar-striped",
+    type_progress: "bg--primary ",
   },
   speed: { name: "Velocidad", type_progress: "bg-warning" },
 };

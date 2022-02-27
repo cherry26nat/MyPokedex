@@ -20,7 +20,7 @@
         <div class="info">
           <div class="header">
             <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            <div class="button"></div>
+            <div class="item--speech" id="item-speech"></div>
           </div>
           <h3 class="id" id="pokemonId">#???</h3>
           <h1 class="name" id="pokemonName">Not Found</h1>
@@ -42,39 +42,44 @@
           </div>
           <div class="statistics">
             <h4>Estadisticas</h4>
-            <div class="graphic">
-              <p>vida</p>
-              <div class="bar">
-                <p>24%</p>
-                <div class="bar-color" style="width: 24%"></div>
-              </div>
-            </div>
+            <div class="graphic" id="wrapper-stats"></div>
           </div>
           <div class="evolution">
             <h4>Evoluciones</h4>
-            <div class="evolution-img">
-              <img src="./img/pikachu.png" alt="" />
-              <p>name</p>
+            <div class="evolution-img-wrapper">
+              <div class="evolution-img">
+                <img src="./img/pikachu.png" alt="" />
+                <p>name</p>
+              </div>
+              <div class="evolution-img">
+                <img src="./img/pikachu.png" alt="" />
+                <p>name</p>
+              </div>
+              <div class="evolution-img">
+                <img src="./img/pikachu.png" alt="" />
+                <p>name</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="buttons">
-        <div class="left">
-          <a href="">
+        <a id="item-prev" href="#">
+          <div class="left">
             <i class="fas fa-arrow-left"></i>
-          </a>
-        </div>
-        <div class="right">
-          <a href="">
+          </div>
+        </a>
+        <a id="item-next" href="#">
+          <div class="right">
             <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
     <script src="./js/config.js"></script>
     <script src="./js/infoUtils.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/info.js"></script>
+    <script src="./js/pagination.js"></script>
   </body>
 </html>

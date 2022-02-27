@@ -24,12 +24,31 @@
           }
         }
 
-        .button {
-          width: 2rem;
-          height: 2rem;
+        .item--speech {
+          width: 4rem;
+          height: 4rem;
           border-radius: 50%;
-          background: $background-color;
-          border: 0.15rem solid $light-color;
+          background: #32ccff;
+          border: 0.3rem solid $light-color;
+          cursor: pointer;
+        }
+
+        .animate-speech {
+          animation: flashBg infinite 0.7s;
+        }
+
+        @keyframes flashBg {
+          0%,
+          50%,
+          100% {
+            background-color: #32ccff;
+            box-shadow: 0 ​0 7px #fff;
+          }
+          25%,
+          75% {
+            background-color: #fff;
+            box-shadow: 0 ​0 15px #fff;
+          }
         }
       }
 
@@ -121,6 +140,7 @@
       .status {
         #pokemonType {
           display: flex;
+          color: transparent;
 
           .pokemon-type {
             padding: 3px 8px;
@@ -148,26 +168,30 @@
       .statistics {
         .graphic {
           margin: 0;
+          display: flex;
+          flex-wrap: wrap;
           .bar {
+            position: relative;
             margin: 0;
             width: 10rem;
             height: 2rem;
-            border: 0.15rem solid black;
+            border: 1px solid black;
             border-radius: 1rem;
             overflow: hidden;
 
-            p {
+            span {
               text-align: center;
-              width: 10rem;
+              width: auto;
               position: absolute;
-              height: 2rem;
+              height: auto;
               margin: 0;
-              font-size: 1.3rem;
+              font-size: 1rem;
+              top: 15%;
+              left: 10%;
             }
             .bar-color {
               width: 24%;
               height: 100%;
-              background: red;
               margin: 0;
             }
           }
@@ -175,27 +199,23 @@
       }
 
       .evolution {
-        .evolution-img {
-          width: 100%;
-          overflow: hidden;
+        .evolution-img-wrapper {
           display: flex;
-          justify-content: center;
-          padding-bottom: 0.5em;
-          flex-direction: column;
 
-          img {
-            width: 25%;
+          .evolution-img {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 0.5em;
+            flex-direction: column;
 
-            @media (min-width: 768px) {
-              width: 15%;
-
-              @media (min-width: 1024px) {
-                width: 10%;
-              }
+            img {
+              width: 35%;
             }
-          }
-          p {
-            text-transform: capitalize;
+            p {
+              text-transform: capitalize;
+            }
           }
         }
       }
@@ -208,17 +228,30 @@
     bottom: 1rem;
     right: 3rem;
 
-    div {
-      margin: 0.5rem;
-      i {
-        color: $background-color;
+    a {
+      text-decoration: none;
 
-        @media (min-width: 768px) {
-          font-size: 1.3em;
+      div {
+        margin: 0.5rem;
+        background: black;
+        border-radius: 50%;
+        padding: 1rem;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: transform 0.2s ease-in-out;
 
-          @media (min-width: 1024px) {
-            font-size: 1.8em;
-          }
+        &:hover {
+          transform: scale(1.06);
+          transition: transform 0.2s ease-in-out;
+        }
+
+        i {
+          color: $background-color;
         }
       }
     }
