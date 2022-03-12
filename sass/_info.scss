@@ -1,8 +1,12 @@
 .content {
   background: $seconday;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
   .wrapper-principal-info {
     border-radius: 0 0 35% 35%;
+    width: 100%;
 
     .info {
       padding: 0.5em 1.5em 0 1.5em;
@@ -89,9 +93,15 @@
       display: flex;
       justify-content: center;
       padding-bottom: 0.5em;
+
       img {
         width: 30%;
+        transition: transform 0.3s ease-in-out;
 
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s ease-in-out;
+        }
         @media (min-width: 768px) {
           width: 20%;
 
@@ -104,6 +114,8 @@
   }
 
   .wrapper-other-info {
+    width: 90%;
+
     .buttons {
       margin: 1em;
       display: flex;
@@ -113,8 +125,11 @@
     }
 
     .info {
+      text-align: center;
       div {
-        margin: 1em;
+        margin: 3em;
+        justify-content: center;
+
         h4 {
           color: $background-color;
           @media (min-width: 768px) {
@@ -141,6 +156,7 @@
         #pokemonType {
           display: flex;
           color: transparent;
+          margin: 0;
 
           .pokemon-type {
             padding: 3px 8px;
@@ -153,6 +169,7 @@
             margin: 3px;
             text-transform: capitalize;
             font-size: 0.8em;
+            margin: 2rem;
 
             @media (min-width: 768px) {
               font-size: 1em;
@@ -165,56 +182,103 @@
         }
       }
 
-      .statistics {
-        .graphic {
-          margin: 0;
+      .stats-evolution {
+        margin: 3rem 0;
+        @media (min-width: 768px) {
           display: flex;
-          flex-wrap: wrap;
-          .bar {
-            position: relative;
-            margin: 0;
-            width: 10rem;
-            height: 2rem;
-            border: 1px solid black;
-            border-radius: 1rem;
-            overflow: hidden;
 
-            span {
-              text-align: center;
-              width: auto;
-              position: absolute;
-              height: auto;
-              margin: 0;
-              font-size: 1rem;
-              top: 15%;
-              left: 10%;
+          @media (min-width: 1024px) {
+            display: flex;
+          }
+        }
+        .statistics {
+          margin: 0;
+          flex-wrap: wrap;
+          width: auto;
+          @media (min-width: 768px) {
+            width: 50%;
+
+            @media (min-width: 1024px) {
+              width: 50%;
             }
-            .bar-color {
-              width: 24%;
-              height: 100%;
-              margin: 0;
+          }
+
+          .graphic {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            .item {
+              margin: 1.5rem;
+              .bar {
+                position: relative;
+                margin: 0;
+                width: 13rem;
+                height: 2rem;
+                border: 1px solid #615a5a;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                span {
+                  text-align: center;
+                  width: auto;
+                  position: absolute;
+                  height: auto;
+                  margin: 0;
+                  font-size: 1rem;
+                  top: 15%;
+                  left: 10%;
+                  color: $light-color;
+                }
+                .bar-color {
+                  width: 24%;
+                  height: 100%;
+                  margin: 0;
+                }
+              }
             }
           }
         }
-      }
 
-      .evolution {
-        .evolution-img-wrapper {
-          display: flex;
+        .evolution {
+          margin: 0;
 
-          .evolution-img {
-            width: 100%;
-            overflow: hidden;
+          width: auto;
+          @media (min-width: 768px) {
+            width: 50%;
+
+            @media (min-width: 1024px) {
+              width: 50%;
+            }
+          }
+
+          .evolution-img-wrapper {
             display: flex;
             justify-content: center;
-            padding-bottom: 0.5em;
-            flex-direction: column;
+            margin: 0;
+            .evolution-img {
+              margin: 1rem;
+              overflow: hidden;
+              display: flex;
+              padding-bottom: 0.5em;
+              flex-direction: column;
+              align-items: center;
+              border-radius: 1rem;
+              box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.21);
+              transition: transform 0.3s ease-in-out;
 
-            img {
-              width: 35%;
-            }
-            p {
-              text-transform: capitalize;
+              &:hover {
+                transform: scale(1.06);
+                transition: transform 0.3s ease-in-out;
+              }
+
+              img {
+                width: 55%;
+                margin: 0.5rem;
+              }
+              p {
+                text-transform: capitalize;
+                margin: 0.5rem;
+              }
             }
           }
         }
