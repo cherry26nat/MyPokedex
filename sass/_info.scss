@@ -14,6 +14,7 @@
       .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         a {
           i {
             color: $light-color;
@@ -127,11 +128,11 @@
     .info {
       text-align: center;
       div {
-        margin: 3em;
         justify-content: center;
 
         h4 {
           color: $background-color;
+          margin: 1rem;
           @media (min-width: 768px) {
             font-size: 1.3em;
 
@@ -141,10 +142,11 @@
           }
         }
         p {
+          margin: 0;
           font-size: 0.8em;
+          text-align: left;
           @media (min-width: 768px) {
             font-size: 1em;
-
             @media (min-width: 1024px) {
               font-size: 1.5em;
             }
@@ -169,7 +171,7 @@
             margin: 3px;
             text-transform: capitalize;
             font-size: 0.8em;
-            margin: 2rem;
+            margin: 1rem;
 
             @media (min-width: 768px) {
               font-size: 1em;
@@ -183,7 +185,7 @@
       }
 
       .stats-evolution {
-        margin: 3rem 0;
+        margin: 2rem 0;
         @media (min-width: 768px) {
           display: flex;
 
@@ -207,16 +209,31 @@
             margin: 0;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-evenly;
             .item {
-              margin: 1.5rem;
+              margin: 0.5rem;
+              @media (min-width: 768px) {
+                margin: 1.5rem;
+
+                @media (min-width: 1024px) {
+                  margin: 1.5rem;
+                }
+              }
               .bar {
                 position: relative;
                 margin: 0;
-                width: 13rem;
-                height: 2rem;
+                width: 8.5rem;
+                height: 1.3rem;
                 border: 1px solid #615a5a;
                 border-radius: 1rem;
                 overflow: hidden;
+                @media (min-width: 768px) {
+                  width: 13rem;
+
+                  @media (min-width: 1024px) {
+                    width: 13rem;
+                  }
+                }
 
                 span {
                   text-align: center;
@@ -224,7 +241,7 @@
                   position: absolute;
                   height: auto;
                   margin: 0;
-                  font-size: 1rem;
+                  font-size: 0.8rem;
                   top: 15%;
                   left: 10%;
                   color: $light-color;
@@ -255,9 +272,11 @@
             display: flex;
             justify-content: center;
             margin: 0;
+            overflow: scroll;
+            width: 345px;
             .evolution-img {
               margin: 1rem;
-              overflow: hidden;
+
               display: flex;
               padding-bottom: 0.5em;
               flex-direction: column;
@@ -289,8 +308,9 @@
   .buttons {
     display: flex;
     position: fixed;
-    bottom: 1rem;
-    right: 3rem;
+    bottom: 0rem;
+    right: 0rem;
+    margin: 1rem;
 
     a {
       text-decoration: none;
