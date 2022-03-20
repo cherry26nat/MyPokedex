@@ -67,3 +67,45 @@ const mapRenderStats = (elementRender, stats) => {
       </div> `);
   });
 };
+
+const getIdPokemon = (url) =>
+  url
+    .split("/")
+    .filter((url) => url)
+    .pop();
+
+const getAllEvolutionsPokemon = (evolutions) => {
+  evolutionsPokemon.push(getIdPokemon(evolutions.species.url));
+
+  const getEvolution = async (evolves_to) => {
+    if (evolves_to.length > 1) {
+      const PokemonsIds = evolves_to.map((evolve) =>
+        getIdPokemon(evolve.species.url)
+      );
+
+      evolutionsPokemon.push(PokemonsIds);
+    } else {
+      if (evolves_to[0]) {
+        evolutionsPokemon.push(getIdPokemon(evolves_to[0].species.url));
+        getEvolution(evolves_to[0].evolves_to);
+      }
+    }
+  };
+
+  getEvolution(evolutions.evolves_to);
+};
+
+const setEvolutionElement = (pokemon) => `
+<div class="item-img-evolution">
+<a href="../info.html?id=${pokemon.id}" class="text-center">
+  <img
+    class="img-pokemon-evolution img-responsive"
+    src="${getImagePokemon(
+      pokemon.detail,
+      "small",
+      localStorage.getItem("imageType")
+    )}"
+    alt="pokemon"
+/></a>
+<h6 class="text-center name-pokemon">${pokemon.name}</h6>
+</div>`;

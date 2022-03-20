@@ -127,8 +127,10 @@
 
     .info {
       text-align: center;
+      margin-bottom: 6.5rem;
       div {
         justify-content: center;
+        align-items: center;
 
         h4 {
           color: $background-color;
@@ -164,7 +166,7 @@
             padding: 3px 8px;
             border-radius: 1.2rem;
             border: 1px solid rgba(0, 0, 0, 0.1);
-            background: rgba(0, 0, 0, 0.2) !important;
+            background-color: rgba(0, 0, 0, 0.2);
             color: #ffffff;
             font-weight: 500;
             text-align: center;
@@ -271,33 +273,40 @@
           .evolution-img-wrapper {
             display: flex;
             justify-content: center;
-            margin: 0;
-            overflow: scroll;
-            width: 345px;
-            .evolution-img {
-              margin: 1rem;
+            overflow-x: scroll;
+            width: 100%;
+            margin: auto;
+            max-width: 100%;
 
+            .item-img-column {
               display: flex;
-              padding-bottom: 0.5em;
               flex-direction: column;
-              align-items: center;
-              border-radius: 1rem;
-              box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.21);
-              transition: transform 0.3s ease-in-out;
+              justify-content: space-between;
+              color: transparent;
+            }
 
-              &:hover {
-                transform: scale(1.06);
-                transition: transform 0.3s ease-in-out;
-              }
+            .item-img-evolution {
+              margin: 0.7rem;
+              transition: all 0.5s ease-in-out;
 
-              img {
-                width: 55%;
-                margin: 0.5rem;
+              h6 {
+                color: black;
+                margin: 0;
               }
-              p {
-                text-transform: capitalize;
-                margin: 0.5rem;
-              }
+            }
+
+            .item-img-evolution .img-pokemon-evolution {
+              width: 100px;
+              image-rendering: auto;
+            }
+
+            .item-img-evolution a {
+              display: block;
+            }
+
+            .item-img-evolution:hover {
+              transform: scale(1.1);
+              transition: all 0.5s ease-in-out;
             }
           }
         }

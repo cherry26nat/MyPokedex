@@ -1,11 +1,7 @@
 const config = {
   apiUrl: "https://pokeapi.co/api/v2",
   maxPokeApipokemons: 10220,
-  serverPokemonPuntoCom: {
-    urlImgSmall: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail",
-    urlImgLarge: "https://assets.pokemon.com/assets/cms2/img/pokedex/full",
-    maxPokemons: 898,
-  },
+
   serverSerebi: {
     urlImgSmall: "https://www.serebii.net/pokemongo/pokemon",
     urlImgLarge: "https://www.serebii.net/swordshield/pokemon",

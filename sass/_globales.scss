@@ -21,6 +21,10 @@ $bg--primary: #ffb284;
 
 $bg-warning: #ffd248;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 *:before,
 *:after {
@@ -42,7 +46,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
 }
-
+/*
 .color-normal {
   background-color: rgba(199, 180, 159, 0.6);
 }
@@ -114,7 +118,7 @@ body {
 .color-dark {
   background-color: rgba(118, 112, 131, 0.6);
 }
-
+ */
 .none {
   display: none !important;
 }

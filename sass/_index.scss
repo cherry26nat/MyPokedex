@@ -102,12 +102,16 @@
 }
 
 .switch-button {
-  width: 6rem;
+  width: 100%;
   margin: 1em 0;
   border-radius: 0.8em;
-  overflow: hidden;
   display: flex;
   border: 1px solid #e0562c;
+  overflow: hidden;
+
+  @media (min-width: 700px) {
+    width: 17rem;
+  }
 
   input {
     width: 0;
